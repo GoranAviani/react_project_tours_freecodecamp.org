@@ -10,9 +10,17 @@ function App() {
 
    const fetchTours = async () => {
       setLoading(true)
+       try{
         const response = await fetch(url)
        const tours = await response.json()
-       console.log(tours)
+        console.log(tours)
+         setLoading(false)
+
+       }catch(error){
+
+       }
+
+
    }
 
    useEffect(()=>{fetchTours()}, [])
