@@ -17,7 +17,8 @@ function App() {
          setLoading(false)
 
        }catch(error){
-
+setLoading(false)
+           console.log(error)
        }
 
 
